@@ -2,12 +2,12 @@
 
 Version 0.1.0
 
-Python script to write a single gene count table from multiple count files. Repo includes example data and metadata requirements.
+Python script to write a single gene count table from multiple count files. Repo includes compressed example data and reference files.
 
 ## Overview
 
 Input:
-- One .hdf5 file per sample (can be many samples, grouped by sequencing LIMSID, or other of variable of choice).
+- One .hdf5 file per sample (can be many samples, grouped by sequencing LIMSID, or other variable of choice).
 
 The filenames *must* contain unique combinations of identifiers, that are also found as column names in the metadata file. The hdf5 files contain vectors of counts, per gene ID (with gene IDs sorted lexicographically).
 
@@ -25,11 +25,12 @@ Requires reference genome file to extract gene IDs:
 This file is too large to host on GitHub without compression, so be sure to unarchive after cloning the repo.
 
 ### Workflow
-- Clone the repo
+- Clone the repo from main
 - Verify folder structure
-- Unarchive ref gff file!
+- ! Unarchive /ref gff file
+- ! Unarchive /data/raw/ folder
 - Navigate to root (where the main Python script is located)
-- Verify dependencies (in particular gtfparser)
+- Verify and install dependencies (in particular gtfparser; also see requirements.txt)
 - Run script
 
 ## Project organization
@@ -42,14 +43,14 @@ This file is too large to host on GitHub without compression, so be sure to unar
 ├── README.md
 ├── requirements.txt
 ├── write_count_table.py      <- Main Python script.
-├── data                      <- All project data, ignored by git
+├── data                      <- 
 │   ├── processed             <- The final count table.
-│   ├── raw                   <- The original, immutable data dump.
+│   ├── raw                   <- Count files in hdf5 format. Decompress before use.
 ├── docs                      <- Documentation notebook for users 
 │   ├── manuscript            <- Manuscript source, e.g., LaTeX, Markdown, etc. 
 │   └── reports               <- Other project reports and notebooks (e.g. Jupyter, .Rmd)
 ├── metadata                  <- Any annotations to the data. 
-├── ref                       <- Reference genome files, ignored by git.
+├── ref                       <- Reference gene annotation file. Decompress before use.
 ├── results
 │   ├── figures               <- Figures for the manuscript or reports (PG)
 │   └── output                <- Other output for the manuscript or reports 
