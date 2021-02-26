@@ -2,7 +2,7 @@
 
 Version 0.1.0
 
-Python script to write a single gene count table from multiple count files. Repo includes example data and metadata requirements.
+Python script to write a single gene count table from multiple count files. Repo includes compressed example data and reference files.
 
 ## Overview
 
@@ -27,9 +27,10 @@ This file is too large to host on GitHub without compression, so be sure to unar
 ### Workflow
 - Clone the repo
 - Verify folder structure
-- Unarchive ref gff file!
+- Unarchive /ref gff file!
+- Unarchive /data/raw/ folder!
 - Navigate to root (where the main Python script is located)
-- Verify dependencies (in particular gtfparser)
+- Verify and install dependencies (in particular gtfparser)
 - Run script
 
 ## Project organization
