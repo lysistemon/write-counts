@@ -7,7 +7,7 @@ Python script to write a single gene count table from multiple count files. Repo
 ## Overview
 
 Input:
-- One .hdf5 file per sample (can be many samples, grouped by sequencing LIMSID, or other of variable of choice).
+- One .hdf5 file per sample (can be many samples, grouped by sequencing LIMSID, or other variable of choice).
 
 The filenames *must* contain unique combinations of identifiers, that are also found as column names in the metadata file. The hdf5 files contain vectors of counts, per gene ID (with gene IDs sorted lexicographically).
 
@@ -25,12 +25,12 @@ Requires reference genome file to extract gene IDs:
 This file is too large to host on GitHub without compression, so be sure to unarchive after cloning the repo.
 
 ### Workflow
-- Clone the repo
+- Clone the repo from main
 - Verify folder structure
-- Unarchive /ref gff file!
-- Unarchive /data/raw/ folder!
+- ! Unarchive /ref gff file
+- ! Unarchive /data/raw/ folder
 - Navigate to root (where the main Python script is located)
-- Verify and install dependencies (in particular gtfparser)
+- Verify and install dependencies (in particular gtfparser; also see requirements.txt)
 - Run script
 
 ## Project organization
