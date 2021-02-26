@@ -2,7 +2,7 @@
 
 Version 0.1.0
 
-Python script to write a single gene count table from multiple count files.
+Python script to write a single gene count table from multiple count files. Repo includes example data and metadata requirements.
 
 ## Overview
 
