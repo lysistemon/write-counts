@@ -2,8 +2,35 @@
 
 Version 0.1.0
 
-Python script to write count table from binned count files (hdf5).
+Python script to write a single gene count table from multiple count files.
 
+## Overview
+
+Input:
+- One .hdf5 file per sample (can be many samples, grouped by sequencing LIMSID, or other of variable of choice).
+
+The filenames *must* contain unique combinations of identifiers, that are also found as column names in the metadata file. The hdf5 files contain vectors of counts, per gene ID (with gene IDs sorted lexicographically).
+
+Output:
+- One table (genes x samples) per group.
+
+Requires metadata:
+- One table (samples x variables) per group. 
+
+The metadata table must contain columns with names that correspond with the filenames (because files will be loaded based on the metadata annotations).
+
+Requires reference genome file to extract gene IDs:
+- Homo_sapiens.GRCh37.dna.gencode.v26lift37.basic.with_ERCC.gff 
+
+This file is too large to host on GitHub without compression, so be sure to unarchive after cloning the repo.
+
+### Workflow
+- Clone the repo
+- Verify folder structure
+- Unarchive ref gff file!
+- Navigate to root (where the main Python script is located)
+- Verify dependencies (in particular gtfparser)
+- Run script
 
 ## Project organization
 
@@ -14,20 +41,19 @@ Python script to write count table from binned count files (hdf5).
 ├── LICENSE.md
 ├── README.md
 ├── requirements.txt
-├── bin                <- Compiled and external code, ignored by git (PG)
-│   └── external       <- Any external source code, ignored by git (RO)
-├── config             <- Configuration files (HW)
+├── write_count_table.py      <- Main Python script.
 ├── data               <- All project data, ignored by git
-│   ├── processed      <- The final, canonical data sets for modeling. (PG)
-│   ├── raw            <- The original, immutable data dump. (RO)
-│   └── temp           <- Intermediate data that has been transformed. (PG)
-├── docs               <- Documentation notebook for users (HW)
-│   ├── manuscript     <- Manuscript source, e.g., LaTeX, Markdown, etc. (HW)
-│   └── reports        <- Other project reports and notebooks (e.g. Jupyter, .Rmd) (HW)
+│   ├── processed      <- The final count table.
+│   ├── raw            <- The original, immutable data dump.
+├── docs               <- Documentation notebook for users 
+│   ├── manuscript     <- Manuscript source, e.g., LaTeX, Markdown, etc. 
+│   └── reports        <- Other project reports and notebooks (e.g. Jupyter, .Rmd)
+├── metadata           <- Any annotations to the data. 
+├── ref                <- Reference genome files, ignored by git.
 ├── results
 │   ├── figures        <- Figures for the manuscript or reports (PG)
-│   └── output         <- Other output for the manuscript or reports (PG)
-└── src                <- Source code for this project (HW)
+│   └── output         <- Other output for the manuscript or reports 
+└── src                <- Source code for this project 
 
 ```
 
