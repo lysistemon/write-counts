@@ -42,18 +42,18 @@ This file is too large to host on GitHub without compression, so be sure to unar
 ├── README.md
 ├── requirements.txt
 ├── write_count_table.py      <- Main Python script.
-├── data               <- All project data, ignored by git
-│   ├── processed      <- The final count table.
-│   ├── raw            <- The original, immutable data dump.
-├── docs               <- Documentation notebook for users 
-│   ├── manuscript     <- Manuscript source, e.g., LaTeX, Markdown, etc. 
-│   └── reports        <- Other project reports and notebooks (e.g. Jupyter, .Rmd)
-├── metadata           <- Any annotations to the data. 
-├── ref                <- Reference genome files, ignored by git.
+├── data                      <- All project data, ignored by git
+│   ├── processed             <- The final count table.
+│   ├── raw                   <- The original, immutable data dump.
+├── docs                      <- Documentation notebook for users 
+│   ├── manuscript            <- Manuscript source, e.g., LaTeX, Markdown, etc. 
+│   └── reports               <- Other project reports and notebooks (e.g. Jupyter, .Rmd)
+├── metadata                  <- Any annotations to the data. 
+├── ref                       <- Reference genome files, ignored by git.
 ├── results
-│   ├── figures        <- Figures for the manuscript or reports (PG)
-│   └── output         <- Other output for the manuscript or reports 
-└── src                <- Source code for this project 
+│   ├── figures               <- Figures for the manuscript or reports (PG)
+│   └── output                <- Other output for the manuscript or reports 
+└── src                       <- Source code for this project 
 
 ```
 
